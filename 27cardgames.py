@@ -1,3 +1,7 @@
+# youtube video link --> https://www.youtube.com/watch?v=l7lP9y7Bb5g
+# simply run this scripty python 27cargames.py
+
+
 import random
 # from colorama import Fore, Back, Style
 import time
