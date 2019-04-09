@@ -44,7 +44,7 @@ for x in cards:
     print x
 
 print "\n\nPlease follow below steps\n\n1. Remember a card from above given list\n"
-raw_input("2. Do you remember your card? Please enter to proceed\n")
+raw_input("2. Do you remember your card? Press ENTER to proceed\n")
 user_input = raw_input("3. Input any number from 1 to 26 for game to start\n")
 
 try:
