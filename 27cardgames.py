@@ -30,11 +30,11 @@ def play_cards(cards):
     decks.append(deck_2)
     decks.append(deck_3)
     i = 0
-    print "\n"
+    # print "\n"
     while i < 9:
-        print "{:20s} {:20s} {:20s}".format(deck_1[i], deck_2[i], deck_3[i])
+        print "| {:20s}| {:20s}| {:20s}|".format(deck_1[i], deck_2[i], deck_3[i])
         i = i + 1
-    print "\n"
+    # print "\n"
     return decks
 
 
@@ -43,9 +43,9 @@ random.shuffle(cards)
 for x in cards:
     print x
 
-print "\n\n1. Remember a card from above given list"
-raw_input("Press any key to proceed")
-user_input = raw_input("2. Input any number from 1 to 26 for game to start\n")
+print "\n\nPlease follow below steps\n\n1. Remember a card from above given list\n"
+raw_input("2. Do you remember your card? Please enter to proceed\n")
+user_input = raw_input("3. Input any number from 1 to 26 for game to start\n")
 
 try:
     number = int(user_input)
@@ -68,10 +68,13 @@ one_quotient = ((number%9)%3)
 
 
 arr = [one_quotient, three_quotient, nine_quotient]
-
+count = 1
 for x in arr:
-    print "SHUFFLING CARDS"
+    print "-------------------------- ROUND " + str(count) + "--------------------------------"
+    count = count + 1
+    # print "SHUFFLING CARDS"
     decks = play_cards(cards)
+    print "------------------------------------------------------------------"
     column_input = raw_input("In which column your card is present? 0 or 1 or 2? (From Left To Right)\n")
     try:
         column = int(column_input)  
@@ -107,18 +110,12 @@ for x in arr:
 print "\n\n"
 i = 0 
 
-print "OPENING CARDS ONE BY ONE"
+print "Let's see what card have we got at your selected number\n"
+time.sleep(1)
 while i < number:
     print str(i+1) + " --> "  + cards[i]
     i = i + 1;
     time.sleep(0.5)
 
-print "YOUR CARD IS\n"
+print "VOILLAA!!! Card at " + str(i+1)+ "th position is\n"
 print(str(i+1) + " --> " +cards[number])
-
-
-
-
-
-
-
